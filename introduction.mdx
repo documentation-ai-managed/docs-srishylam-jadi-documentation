@@ -1,0 +1,112 @@
+---
+title: Welcome to Srishylam Jadi
+description: An overview of Srishylam Jadi, a documentation platform for organizing and managing project documentation spaces.
+---
+
+## Overview
+
+Srishylam Jadi is your comprehensive documentation platform designed to help you organize, manage, and publish project documentation with ease. You create dedicated spaces for each project, leveraging powerful MDX components to build interactive, visually rich docs. Whether you document APIs, user guides, or internal wikis, Srishylam Jadi streamlines the process from writing to deployment.
+
+<Callout kind="info">
+  This platform supports unlimited spaces, custom themes, and seamless integrations with Git repositories for version-controlled documentation.
+</Callout>
+
+## Key Benefits
+
+Discover why teams choose Srishylam Jadi for their documentation needs.
+
+<Columns cols={3}>
+  <Card title="Visual Components" icon="layout" href="/docs/components">
+    Build engaging pages with Cards, Tabs, Steps, and more. No coding required beyond MDX.
+  </Card>
+  <Card title="MDX Powered" icon="code" href="/docs/mdx-syntax">
+    Write in familiar Markdown with JSX components for interactive elements like code tabs and diagrams.
+  </Card>
+  <Card title="Collaboration" icon="users" href="/docs/collaboration">
+    Real-time editing, version history, and role-based access keep your team aligned.
+  </Card>
+</Columns>
+
+## Getting Oriented
+
+Quickly navigate and start using Srishylam Jadi with these steps.
+
+<Steps>
+  <Step title="Create a Space" icon="plus">
+    Log in and click "New Space". Enter your project name, like "MyAPI Docs", and select a template.
+  </Step>
+  <Step title="Add Pages" icon="file-text">
+    Use the sidebar to create pages. Start with `introduction.mdx` for your landing page.
+  </Step>
+  <Step title="Customize Theme" icon="palette">
+    Go to Settings > Theme. Set your primary color to `#3B82F6` for branding.
+  </Step>
+  <Step title="Publish" icon="globe">
+    Preview changes, then hit Publish. Share your live docs via custom domains.
+  </Step>
+</Steps>
+
+## Multi-Platform Setup
+
+Set up your development environment across platforms.
+
+<Tabs>
+  <Tab title="Node.js" icon="nodejs">
+    Install dependencies for local preview:
+
+    <CodeGroup tabs="npm,yarn">
+    ```bash
+    npm init -y
+    npm install @mdx-js/mdx
+    ```
+    ```bash
+    yarn init -y
+    yarn add @mdx-js/mdx
+    ```
+    </CodeGroup>
+  </Tab>
+  <Tab title="VS Code" icon="code">
+    Install the MDX extension:
+
+    ```bash
+    code --install-extension "antfu.vite"
+    code --install-extension "bradlc.vscode-tailwindcss"
+    ```
+  </Tab>
+</Tabs>
+
+## Brand Guidelines
+
+Follow these guidelines to maintain consistency across your documentation.
+
+<ExpandableGroup>
+  <Expandable title="Primary Color" default-open="true">
+    Use `#3B82F6` as your brand blue for headings, links, and accents. Avoid variations like `#2563EB`.
+
+    Example CSS usage:
+
+    ```css
+    :root {
+      --brand-primary: #3B82F6;
+    }
+
+    h1, h2 {
+      color: var(--brand-primary);
+    }
+    ```
+  </Expandable>
+  <Expandable title="Logo Usage">
+    Download the SVG logo from `/assets/logo.svg`. Scale to fit without distortion. Minimum size: 32x32px.
+
+    | Asset Type | Format | Size |
+    |------------|--------|------|
+    | Primary Logo | SVG | Scalable |
+    | Favicon | PNG | 32x32px |
+    | Dark Mode | SVG | Scalable |
+  </Expandable>
+  <Expandable title="Typography">
+    Headings: Inter Bold. Body: Inter Regular. Font sizes: H1 `2rem`, Body `1rem`.
+  </Expandable>
+</ExpandableGroup>
+
+Start building your first space today and transform how you document projects. Explore the sidebar for more guides on components, integrations, and advanced features.

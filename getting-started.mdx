@@ -1,0 +1,137 @@
+---
+title: Getting Started with Srishylam Jadi
+description: Quick guide to set up your first documentation space and start creating content.
+---
+
+## Overview
+
+Srishylam Jadi helps you organize project documentation in centralized spaces. Set up your account, create a space, upload documents, and navigate effortlessly. Follow these steps to get started in minutes.
+
+<Columns cols={3}>
+  <Card title="Fast Setup" icon="zap" href="#">
+    Complete onboarding in under 5 minutes.
+  </Card>
+  <Card title="Markdown Support" icon="edit-3" href="#">
+    Write docs with familiar Markdown syntax.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#">
+    Track changes with built-in Git integration.
+  </Card>
+</Columns>
+
+## Prerequisites
+
+Ensure you have:
+- A modern browser like Chrome or Firefox.
+- An email address for account verification.
+- Optional: Git installed for advanced workflows.
+
+<Callout kind="tip">
+  New to documentation platforms? Srishylam Jadi uses MDX for interactive components like tabs and steps.
+</Callout>
+
+## Step-by-Step Setup
+
+Follow these sequential steps to launch your first documentation space.
+
+<Steps>
+  <Step title="Create Your Account" icon="user-plus">
+    Visit `https://srishylamjadi.com/signup` and enter your email, password, and name.
+
+    Verify your email via the confirmation link sent to your inbox.
+
+    ```bash
+    # Example curl for API signup (optional)
+    curl -X POST https://api.srishylamjadi.com/v1/auth/signup \
+      -H "Content-Type: application/json" \
+      -d '{
+        "email": "user@example.com",
+        "password": "securepass123"
+      }'
+    ```
+  </Step>
+
+  <Step title="Create a Project Space" icon="folder-plus">
+    Log in and click **New Space** from the dashboard.
+
+    Name your space (e.g., `my-project-docs`), add a description, and select visibility (public or private).
+
+    <CodeGroup tabs="CLI,API">
+      ```bash
+      # CLI command
+      sj space create my-project-docs --description "Project docs"
+      ```
+      ```javascript
+      // API example
+      const response = await fetch('https://api.srishylamjadi.com/v1/spaces', {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${TOKEN}` },
+        body: JSON.stringify({
+          name: 'my-project-docs',
+          description: 'Project documentation'
+        })
+      });
+      ```
+    </CodeGroup>
+  </Step>
+
+  <Step title="Upload Initial Documents" icon="upload">
+    In your space, use the **Upload** button or drag-and-drop files.
+
+    Supported formats: `.mdx`, `.md`, `.png`, `.jpg`.
+
+    <Tabs>
+      <Tab title="Web UI" icon="globe">
+        Select files and click **Upload**. Organize into folders like `guides/` or `api/`.
+      </Tab>
+      <Tab title="CLI" icon="terminal">
+        ```bash
+        sj upload my-project-docs ./docs/*.mdx --folder "guides"
+        ```
+      </Tab>
+    </Tabs>
+  </Step>
+
+  <Step title="Explore Basic Navigation" icon="compass">
+    Use the sidebar for spaces, search bar for content, and top nav for settings.
+
+    Preview docs live and edit with the inline editor.
+
+    ```mermaid
+    graph TD
+        A[Dashboard] --> B[Spaces]
+        B --> C[Documents]
+        C --> D[Search]
+        D --> E[Settings]
+    ```
+  </Step>
+</Steps>
+
+## Common Navigation Tips
+
+<ExpandableGroup>
+  <Expandable title="Search and Filters" default-open="true">
+    Use the global search with filters for spaces, tags, or file types. Example: `api >500 lines`.
+  </Expandable>
+  <Expandable title="Keyboard Shortcuts">
+    - `<kbd>Ctrl</kbd>+<kbd>K</kbd>: Quick search
+    - `<kbd>Ctrl</kbd>+<kbd>P</kbd>: Open recent docs
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info">
+  Customize your dashboard theme via **Settings > Appearance**. Brand color defaults to `#3B82F6`.
+</Callout>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Write Your First Doc" icon="edit" href="#">
+    Create `introduction.mdx` and add components like `<Steps>`.
+  </Card>
+  <Card title="Invite Collaborators" icon="users" href="#">
+    Share spaces with `@team@company.com`.
+  </Card>
+</Columns>
+
+Your documentation space is ready. Start building interactive guides today.

@@ -1,0 +1,129 @@
+---
+title: Changelog
+description: Version history and updates for Srishylam Jadi, highlighting new features and improvements.
+---
+
+## Recent Releases
+
+Stay updated with the latest enhancements in Srishylam Jadi. You access all changes here, organized by version. Review the release notes to understand new capabilities, fixes, and migration steps.
+
+<Update label="2024-10-20" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documentation editing
+- Introduced custom themes with your brand color `#3B82F6`
+- New search indexing for faster page lookups across projects
+
+## Improvements
+
+- Enhanced performance for large documentation sites with lazy loading
+- Better mobile responsiveness for all components
+
+## Bug Fixes
+
+- Fixed parsing errors in nested code blocks
+- Resolved issues with special character escaping in prose
+- Corrected Mermaid diagram rendering on initial load
+
+</Update>
+
+<Update label="2024-09-25" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Integrated API documentation components like `<ParamField>` and `<ResponseField>`
+- Added video embedding support with `<Video>` component
+
+## Improvements
+
+- Optimized MDX parsing speed by 40%
+- Improved accessibility with better alt text handling
+
+## Bug Fixes
+
+- Patched JSX attribute validation for double quotes
+- Fixed heading hierarchy enforcement starting from H2
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core MDX documentation generator with YAML frontmatter support
+- Full component library including `<Callout>`, `<Steps>`, and `<Tabs>`
+- Automatic escaping for `{`, `}`, `<`, and `>` characters
+
+## Breaking Changes
+
+- Removed H1 support; all pages now start with H2 headings
+- Updated attribute syntax to require double quotes only
+
+</Update>
+
+## Upgrading to the Latest Version
+
+Follow these steps to upgrade your Srishylam Jadi installation. You ensure smooth transitions by backing up your config first.
+
+<Steps>
+  <Step title="Backup Your Site" icon="database">
+    Save your current documentation files and database.
+
+    <Callout kind="tip">
+      Use Git for version control: commit your changes before upgrading.
+    </Callout>
+  </Step>
+  <Step title="Update Package" icon="download">
+    Run the appropriate command for your package manager.
+    <CodeGroup tabs="npm,yarn,pnpm">
+      ```bash
+      npm install srishylam-jadi@latest
+      ```
+      ```bash
+      yarn add srishylam-jadi@latest
+      ```
+      ```bash
+      pnpm add srishylam-jadi@latest
+      ```
+    </CodeGroup>
+  </Step>
+  <Step title="Rebuild and Deploy" icon="rocket">
+    Rebuild your site and deploy to production.
+    ```bash
+    npm run build
+    npm run deploy
+    ```
+  </Step>
+</Steps>
+
+## Upcoming Changes
+
+<Expandable title="v1.3.0 Preview" default-open="false">
+  Plan for AI-assisted content generation and advanced analytics integration. You preview these features in the beta channel.
+</Expandable>
+
+<Columns cols={3}>
+  <Card title="Contribute" icon="github" href="https://github.com/srishylam-jadi/docs" target="_blank">
+    Report bugs or suggest features.
+  </Card>
+  <Card title="Roadmap" icon="map" href="/docs/roadmap">
+    View our public development plans.
+  </Card>
+  <Card title="Support" icon="help-circle" href="/docs/support">
+    Get help from the community.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Feature Requests" icon="star">
+    Submit ideas via GitHub issues.
+  </Tab>
+  <Tab title="Bug Reports" icon="bug">
+    Use the issue template for reproducibility.
+  </Tab>
+</Tabs>
+
+<Callout kind="info">
+  Subscribe to our RSS feed for instant changelog notifications.
+</Callout>
